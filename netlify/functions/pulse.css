@@ -1,0 +1,36 @@
+:root{
+  --bg:#0b0e13; --panel:#10151f; --text:#e7ecf3; --muted:#9fb0c3; --brand:#6ee7ff; --ok:#53d18e;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%;background:var(--bg);color:var(--text);margin:0}
+.sr-only{position:absolute;left:-9999px}
+.shell{min-height:100%;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;gap:16px;padding:16px 20px;border-bottom:1px solid #1b2330;background:var(--panel);position:sticky;top:0}
+.brand{font-weight:800;letter-spacing:.5px}
+.tabs{display:flex;gap:8px}
+.tab{background:transparent;border:1px solid #1b2330;color:var(--muted);padding:8px 10px;border-radius:8px;cursor:pointer}
+.tab.active{color:var(--text);border-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset}
+.content{padding:20px;flex:1;max-width:900px;margin:0 auto;width:100%}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:var(--panel);border:1px solid #1b2330;border-radius:12px;padding:14px;min-height:82px;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:12px;color:var(--muted);margin:0}
+.card{font-size:28px;font-weight:700}
+
+.stack{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid #1b2330;border-radius:12px;padding:12px 14px}
+.title{font-weight:600}
+.meta{color:var(--muted);font-size:12px;margin-top:2px}
+
+.btn{background:var(--brand);color:#001018;border:none;border-radius:8px;padding:8px 10px;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid #223043}
+
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px}
+.badge.ok{background:#153625;color:#b5ffd8;border:1px solid #235c3d}
+
+.center{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+
+.skeleton{background:var(--panel);border:1px solid #1b2330;border-radius:12px;min-height:70px}
+.skeleton.stack-3{display:grid;gap:10px;padding:10px}
+.skeleton.stack-3::before,.skeleton.stack-3::after{content:'';height:50px;background:#0e131c;border:1px solid #182130;border-radius:8px}
